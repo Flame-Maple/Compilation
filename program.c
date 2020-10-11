@@ -27,7 +27,7 @@ int main(int argc, const char * argv[]) {
                         if(factor[j] != '\0')
                             printf("Int(%s)\n", &factor[j]);
                         else
-                            printf("0\n");
+                            printf("Int(0)\n");
                         flag = k = 0;
                     }
                     else if (flag == 2) {
@@ -58,7 +58,7 @@ int main(int argc, const char * argv[]) {
                         if(factor[j] != '\0')
                             printf("Int(%s)\n", &factor[j]);
                         else
-                            printf("0\n");
+                            printf("Int(0)\n");
                         flag = k = 0;
                     }
                     else if (flag == 2) {
@@ -112,7 +112,7 @@ int main(int argc, const char * argv[]) {
                         if(factor[j] != '\0')
                             printf("Int(%s)\n", &factor[j]);
                         else
-                            printf("0\n");
+                            printf("Int(0)\n");
                     }
                     flag = k = 0;
                 }
