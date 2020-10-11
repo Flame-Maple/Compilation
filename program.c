@@ -24,8 +24,10 @@ int main(int argc, const char * argv[]) {
                     if (flag == 1) {
                         for (j = 0; factor[j] == '0'; j++)
                             ;
-                        if(strlen(factor) != 0)
+                        if(factor[j] != '\0')
                             printf("Int(%s)\n", &factor[j]);
+                        else
+                            printf("Int(%s)\n", factor);
                         flag = k = 0;
                     }
                     else if (flag == 2) {
@@ -53,8 +55,10 @@ int main(int argc, const char * argv[]) {
                     if (flag == 1) {
                         for (j = 0; factor[j] == '0'; j++)
                             ;
-                        if(strlen(factor) != 0)
+                        if(factor[j] != '\0')
                             printf("Int(%s)\n", &factor[j]);
+                        else
+                            printf("Int(%s)\n", factor);
                         flag = k = 0;
                     }
                     else if (flag == 2) {
@@ -70,10 +74,8 @@ int main(int argc, const char * argv[]) {
                             printf("Then\n");
                         else if(strcmp(factor, "ELSE") == 0)
                             printf("Else\n");
-                        else {
-                            if(strlen(factor) != 0)
+                        else
                             printf("Ident(%s)\n", factor);
-                        }
                         flag = k = 0;
                     }
                 }
@@ -107,8 +109,10 @@ int main(int argc, const char * argv[]) {
                     for (j = 0; j < strlen(factor) && factor[j] == 0; j++)
                         ;
                     if(strlen(factor) != 0) {
-                        if(strlen(factor) != 0)
+                        if(factor[j] != '\0')
                             printf("Int(%s)\n", &factor[j]);
+                        else
+                            printf("Int(%s)\n", factor);
                     }
                     flag = k = 0;
                 }
