@@ -24,8 +24,8 @@ int main(int argc, const char * argv[]) {
                     if (flag == 1) {
                         for (j = 0; factor[j] == '0'; j++)
                             ;
-                        
-                        printf("Int(%s)\n", &factor[j]);
+                        if(strlen(factor) != 0)
+                            printf("Int(%s)\n", &factor[j]);
                         flag = k = 0;
                     }
                     else if (flag == 2) {
@@ -53,7 +53,8 @@ int main(int argc, const char * argv[]) {
                     if (flag == 1) {
                         for (j = 0; factor[j] == '0'; j++)
                             ;
-                        printf("Int(%s)\n", &factor[j]);
+                        if(strlen(factor) != 0)
+                            printf("Int(%s)\n", &factor[j]);
                         flag = k = 0;
                     }
                     else if (flag == 2) {
@@ -69,8 +70,10 @@ int main(int argc, const char * argv[]) {
                             printf("Then\n");
                         else if(strcmp(factor, "ELSE") == 0)
                             printf("Else\n");
-                        else
+                        else {
+                            if(strlen(factor) != 0)
                             printf("Ident(%s)\n", factor);
+                        }
                         flag = k = 0;
                     }
                 }
@@ -103,7 +106,10 @@ int main(int argc, const char * argv[]) {
                     factor[k] = '\0';
                     for (j = 0; j < strlen(factor) && factor[j] == 0; j++)
                         ;
-                    printf("Int(%s)\n", &factor[j]);
+                    if(strlen(factor) != 0) {
+                        if(strlen(factor) != 0)
+                            printf("Int(%s)\n", &factor[j]);
+                    }
                     flag = k = 0;
                 }
                 flag = 2;
